@@ -49,7 +49,7 @@ def steg_hide(text, flat_image):
 
         #loop through bits in the i-th byte of text_bytes
         for j in range(8):
-            # get jth bit from the right
+            # get jth bit from the left
             text_bit = ( text_byte >> (7-j) ) & 1
             #set the LSB of np_image_flat to the bit
             flat_image[8*i+j] = (flat_image[8*i+j] & -2) | text_bit
